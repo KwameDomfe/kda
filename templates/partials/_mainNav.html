@@ -1,34 +1,29 @@
 {% load static %}
 <nav 
-    class="mb2-00
-        z-5
-        bb b--white-20 bw3
-        "
-        
+    class="h5-00
+        z-5"   
 >
     <!-- 00.00   HEADER SECTION -->
     <header id="o__mainHeader">
         <section id="navBlock" 
             class="flex justify-center items-center
-                w-100 h6-00
+                w-100 
                 bg-white 
                 fixed
                 z-5"
         >
             <nav id="m__mainNav" 
-                class="flex justify-between items-center 
-                    ttu
-                    h-100
-                    container90"
+                class="flex justify-between items-center container90
+                    ttu"
             >   
                 <div id="m__kda--Logo" 
-                    class="" 
+                    class="w-50-m" 
                     tabindex="0" 
                     title="Kwame Domfe Appau's Logo" 
                     aria-label="Kwame Domfe Appau's Logo"
                 >
                     <a href="{% url 'website:index' %}">
-                        <figure class="flex items-center justify-center"   
+                        <figure class="flex items-center justify-start"   
                         >   
                             <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
                                     alt="Geolo Logo" 
@@ -67,24 +62,24 @@
                     </figure>
                 </div>
                 <ul id="m__navItems" 
-                    class=" flex flex-column justify-center items-center
-                            flex-row-m items-center-m justify-between-m 
-                            w16-00 vh-100 
-                            w-50-m h6-00-m
-                            absolute
-                            right-0 top-4 top-0-m
+                    class=" dn 
+                            flex-m flex-row-m items-center-m justify-between-m 
+                            w16-00 vh-100  
+                            w-50-m h5-00-m
+                            bg-gray
                             ttu black-60 f1-00
                             pt3-00 pt0-00-m
-                            bg-white-90 bg-transparent-m
+                            ph1-00
+                            white-90
                             trans-x-100
                             trans-x-00-m"
                 >
                     <li class=" pb0-25 
                                 mb2-00
                                 mb0-00-m
-                                bb bw1 b--black-40" tabindex="0" title="Revit Courses" aria-label="Revit Courses">
-                        <a href="#" class="black-60">
-                             <h3 class="mb0-00">COURSES</h3>
+                                bb bw1 b--white-90" tabindex="0" title="Courses" aria-label="Revit Courses">
+                        <a href="{% url 'website:courses' %}" class="white-90">
+                             <h3 class="mb0-00 f1-00">COURSES</h3>
                             <ul class="mt5-00 dn"> 
                                 <li>Revit</li>
                                 <li>Naviswork</li>
@@ -97,9 +92,9 @@
                     <li class=" pb0-25
                                 mb2-00
                                 mb0-00-m
-                                bb bw1 b--black-40" tabindex="0" title="Other Courses" aria-label="Other Courses">
-                        <a href="#" class="black-60">
-                            <h3 class="mb0-00">DISCOVER</h3>
+                                bb bw1 b--white-90" tabindex="0" title="Discover" aria-label="Other Courses">
+                        <a href="{% url 'website:discover' %}" class="white-90">
+                            <h3 class="mb0-00 f1-00">DISCOVER</h3>
                         <ul class="mt5-00 dn"> 
                             <li>FAQ's</li>
                             <li>Financing Options</li>
@@ -110,16 +105,36 @@
                     </li>
                     <li class=" pa0-50
                                 mb2-00
-                                mb0-00-m bg-black-60 
-                                " tabindex="0" title="About Me" aria-label="About Me">
-                        <a href="{% url 'website:enrol' %}" class=" white-90">
-                            <h3 class="mb0-00">ENROLL</h3>
+                                mb0-00-m bg-black-60 br0-25 ba b--gold
+                                " tabindex="0" title="Enrol" aria-label="About Me">
+                        <a href="{% url 'website:enrol' %}" class="shadow-4 white-90 ">
+                            <h3 class="mb0-00 f1-00 ">ENROL</h3>
                         </a>
                     </li>
-                    <li class=" pb0-25
+                    <li class="
+                            mb0-00" 
+                            tabindex="0" 
+                            title="Start" 
+                            aria-label="About Me"
+                    >
+                        <a href="{% url 'accounts:register' %}" class=" dib
+                            pv0-50 ph1-00
+                            bg-gold white
+                            br0-25
+                           f1-00 ttu fw6  
+                            
+                            shadow-4"
+                        >
+                        <h3 class="mb0-00 f1-00">START</h3>
+                        </a>
+                    </li>
+                   
+                    <li class="dn pb0-25
                                 mb2-00
-                                mb0-00-m
-                                " tabindex="0" title="" aria-label="About Me">
+                                mb0-00-m" 
+                        tabindex="0"
+                        title="" 
+                        aria-label="">
                         <ul id="connect" class="footerNav__Item flex dn-m w-100">
                             <div class="flex justify-around items-center w-100
                             mb0-00-m">
@@ -150,8 +165,8 @@
                                     </a>
                                 </li>
                             </div>
-                        </ul> 
-                    </li>
+                        </ul>
+                    </li> 
                 </ul>    
             </nav>
         </section>
@@ -167,13 +182,13 @@
         {% if request.user.is_authenticated %}
         
             <!-- Loggen Out User -->
-            <div id="header-user"
+            {% comment %} <div id="header-user"
                 class="flex h2-00"
             >
                 <a  href=""
                     class='flex
                         pv0-25 ph0-50
-                        white-90
+                        black-90
                         ' 
                 >
                     <figure>
@@ -187,13 +202,13 @@
                 <button id="dropdown-button">  
                     &DownArrow;  <!--replace with svg -->
                 </button>
-            </div> 
+            </div>  {% endcomment %}
             <!-- Loggen Out User --> 
             
         {% else %}
             
             <!-- Logged In User -->
-            <a  class="flex items-center justify-center 
+            {% comment %} <a  class="flex items-center justify-center 
                     ph0-50
                    
                     white-90 
@@ -204,7 +219,7 @@
                     class="w1-50 h-100 mr0-50 br0-75" 
                 />
                 <p class="mb0-00">LOGIN</p>
-            </a>
+            </a> {% endcomment %}
             <!-- Logged In User -->
         
         {% endif %}

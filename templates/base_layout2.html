@@ -66,17 +66,21 @@
 
 </head>
 <body class="pa0 ma0">
-
+    <!-- main Header Start -->
     {% include 'partials/_mainNav.html' %}
+    <!-- main Header End -->
 
-    <!-- main Content -->
+    <!-- main Content Start -->
         {% block content %}
             <div class="container">
-                
             </div>
         {% endblock %}
-    <!-- main Content -->
-    
-    {% include 'partials/_mainFooter.html' %}
+    <!-- main Content End -->
+
+    <!-- main Footer Start -->
+    <div class="">
+        {% include 'partials/_mainFooter.html' %}
+    </div>
+    <!-- main Footer End -->
 </body>
 </html>

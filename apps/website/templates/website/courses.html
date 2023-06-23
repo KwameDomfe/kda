@@ -1,9 +1,175 @@
-{% extends 'base_layout.html' %}
+{% extends 'base_layout3.html' %}
 
 {% load static %}
 
-{% block title %} Courses {% endblock title %}
+{% block title %} enrol {% endblock title %}
 
 {% block content %}
-    <h1 class="gold">Courses</h1>
+
+    <div class="fixed bg-black-50 z-5 w-100 top-5">
+        <hgroup class="container90">
+            <ul class="h3-00 pa0-50 b flex justify-around items-center white-90">
+                <li>Revit</li>
+                <li>Naviswork</li>
+                <li>Dynamo</li>
+                <li>Python</li>
+            </ul>
+        </hgroup>
+    </div>
+
+    <div class="grid gtc12 relative"
+    > 
+        <nav id="enrolPageNav"
+            class="gc1s2 w16-00 pl1-00
+                pt2-00 pb1-00 sticky top-8 vh-100 of-y-scroll" 
+               
+        >
+            <ul class="">
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Introduction</p>
+                <li>Before You Learn Revit</li>
+                    <ul>
+                        <li>Revit Terminologies</li>
+                        <li>Addfl ,gfn;glg</li>
+                    </ul>
+                <li>Addfl ,gfn;glg</li>
+                <li>Addfl ,gfn;glg</li>
+            
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Intermediate</p>
+                <li>Addfl ,gfn;glg </li>
+                <li>Addfl ,gfn;glg</li>
+                <li>Addfl ,gfn;glg</li>
+
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Documentation</p>
+                <li>Sheduling</li>
+                <li>Design Options</li>    
+                <li>Phasing</li>
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Modelling</p>
+                <li>Components</li>
+                <li>Conceptual Massing</li>    
+                <li>System Elements</li>
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Project</p>
+                <li>Collaboration</li>
+                <li>Addfl ,gfn;glg</li>    
+                <li>Addfl ,gfn;glg </li>
+                
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Intermediate</p>
+                <li>Addfl ,gfn;glg </li>
+                <li>Addfl ,gfn;glg</li>
+                <li>Addfl ,gfn;glg</li>
+
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Documentation</p>
+                <li>Sheduling</li>
+                <li>Design Options</li>    
+                <li>Phasing</li>
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Modelling</p>
+                <li>Components</li>
+                <li>Conceptual Massing</li>    
+                <li>System Elements</li>
+                <p class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Project</p>
+                <li>Collaboration</li>
+                <li>Addfl ,gfn;glg</li>    
+                <li>Addfl ,gfn;glg </li>
+            </ul>
+        </nav>
+        <div class="gc3s10 grid"
+        >
+            <div class="gc1s9 w-100 ph1-00 pt6-00 tj">
+                
+                <header id="o__bannerBlock" class="
+                    flex flex-column flex-row-m justify-center items-center 
+                    min-vh-100 nmt6-00
+                    ggap2-00-m"
+                >
+                    <div class=" flex w-100 w-50-m">
+                        <figure class=" flex flex-column items-center justify-center
+                                        
+                            ">
+                            <img src="/static/images/Portrait_Images/students_coding.jpg" alt="" class="vh-50 vh-75-m cover">
+                        </figure>     
+                    </div>
+                    <div class="flex flex-column justify-center items-center 
+                        w-100 w-50-m h-50 h-100-m black-60">	
+                        <hgroup class="tc tl-m w-100 npt2-00 mb2-00">
+                            <h1 class="f1-50 f1-75-s f2-50-l mb1-00 
+                            ">  
+                                Evolve in your Career.                 
+                            </h1>
+                            <h2 class="f1-25 f1-50-s f2-25-l mb0-00">
+                                Learn to author and read <span class="gold">BIM Models</span>.
+                            </h2>
+                        </hgroup>
+                        <p class="mb2-00 mb6-00-m f1-25 f1-50-s f2-00-l
+                                tc tl-m
+                        ">
+                            Self directed experiential learning allows you to develop your skills, now and in the future.
+                        </p>
+                        <div class="flex w-100 justify-center justify-start-m"> 
+                            <a href="#" class=" dib 
+                                    pv0-50
+                                    ph1-00
+                                    mb1-00-m mr2-00
+                                    bg-white gold
+                                    ba bw1 br2-00
+                                    ttu
+                                    f1-00 
+                                    fw6
+                                    shadow-4
+                            ">
+                                explore courses 
+                            </a>
+                            <a href="#connect" class=" dib
+                                    pv0-50
+                                    ph1-00
+                                    mb1-00-m
+                                    bg-gold white
+                                    ba bw1 br2-00
+                                    ttu
+                                    f1-00 
+                                    fw6
+                                    shadow-4
+                            ">
+                                ENROLL 
+                            </a>
+                        </div>
+                    </div> 
+                </header>
+                <main>
+                   <p class="f1-25 tracked ">
+                        {% lorem 10 p random %} 
+                   </p>
+                </main>
+                
+                <footer>
+                    put a page footer
+                </footer>
+            </div>
+
+            <div class="gc10s3 min-vh-100 pr1-00 relative"
+            >
+                <div class="sticky top-8 pt2-00">
+                    <small class="flex ba pa0-50 
+                        bg-black-50 white-90"
+                    >
+                        BACK
+                    </small>
+                    <h4 class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Documentation</h4>
+                    <li>Sheduling</li>
+                    <li>Design Options</li>    
+                    <li>Phasing</li>
+                    <h4 class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Modelling</h4>
+                    <li>Components</li>
+                    <li>Conceptual Massing</li>    
+                    <li>System Elements</li>
+                    <h4 class="f1-00 pa0-25 bg-black-50 white-90">Revit Mastery Project</h4>
+                    <li>Collaboration</li>
+                    <li>Addfl ,gfn;glg</li>    
+                    <li>Addfl ,gfn;glg </li>
+                </div> 
+            </div>
+            <div class="gc1s12 ph1-00">
+                {% include 'partials/_mainFooter.html' %}
+            </div>
+            
+        </div>
+    </div>
 {% endblock %}    

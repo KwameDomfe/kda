@@ -20,3 +20,10 @@ def courses(request):
     }
     
     return render(request, 'website/courses.html', context)
+
+def discover(request):
+    
+    context = {
+    }
+    
+    return render(request, 'website/discover.html', context)

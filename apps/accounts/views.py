@@ -5,6 +5,15 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import (redirect, render)
 from django.urls import reverse
 
+def accounts_layout (request):
+
+    
+    context = {
+       
+        }
+
+    return render(request, 'accounts/accounts_layout.html', context)
+
 def login_view (request):
 
     if request.method == "POST":
@@ -19,8 +28,8 @@ def login_view (request):
         form = AuthenticationForm(request)
         
     context = {
-        'form' : form
-        }
+         'form' : form
+         }
 
     return render(request, 'accounts/login.html', context)
 
