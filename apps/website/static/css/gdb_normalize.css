@@ -1,6 +1,6 @@
  html {
     line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    
   }
   
   /* Sections
@@ -182,12 +182,12 @@
    * Correct the inability to style clickable types in iOS and Safari.
    */
   
-  button,
+  /* button,
   [type="button"],
   [type="reset"],
   [type="submit"] {
     -webkit-appearance: button;
-  }
+  } */
   
   /**
    * Remove the inner border and padding in Firefox.
@@ -278,7 +278,7 @@
    */
   
   [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
+    /* -webkit-appearance: textfield; 1 */
     outline-offset: -2px; /* 2 */
   }
   

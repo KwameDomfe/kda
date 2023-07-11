@@ -1,10 +1,10 @@
 {% load static %}
-<nav 
+<nav id="o__mainHeader"
     class="h5-00
-        z-5"   
+        z-2"   
 >
     <!-- 00.00   HEADER SECTION -->
-    <header id="o__mainHeader">
+    <header id="">
         <section id="navBlock" 
             class="flex justify-center items-center
                 w-100 
@@ -12,9 +12,9 @@
                 fixed
                 z-5"
         >
-            <nav id="m__mainNav" 
+            <nav id="m__primaryNav" 
                 class="flex justify-between items-center container90
-                    ttu"
+                   "
             >   
                 <div id="m__kda--Logo" 
                     class="w-50-m" 
@@ -37,8 +37,8 @@
                                 <h2 class="mb0-50 f1-00 tracked">
                                     KWAME DOMFE APPAU
                                 </h2> 
-                                <h3 class="flex justify-center items-center f0-50 mb0-00 tracked">
-                                    designer || programmer || developer
+                                <h3 class="flex justify-center items-center f0-75 mb0-00 tracked-tight">
+                                    Designer || Programmer || Developer
                                 </h3>
                             </figcaption>
                         </figure>   
@@ -66,41 +66,35 @@
                             flex-m flex-row-m items-center-m justify-between-m 
                             w16-00 vh-100  
                             w-50-m h5-00-m
-                            bg-gray
-                            ttu black-60 f1-00
+                            bg-black-60 f1-00
                             pt3-00 pt0-00-m
                             ph1-00
-                            white-90
+                            white-90 
                             trans-x-100
                             trans-x-00-m"
                 >
+                    {% comment %} <li class=" pb0-25 
+                                mb2-00
+                                mb0-00-m
+                               " tabindex="0" title="Style Guide" aria-label="Style Guide">
+                        <a href="{% url 'library:styleGuide' %}" class="white-90">
+                             <h3 class="mb0-00 f1-00">STYLE GUIDE</h3>
+                        </a>
+                    </li> {% endcomment %}
                     <li class=" pb0-25 
                                 mb2-00
                                 mb0-00-m
-                                bb bw1 b--white-90" tabindex="0" title="Courses" aria-label="Revit Courses">
+                               " tabindex="0" title="Courses" aria-label="Revit Courses">
                         <a href="{% url 'website:courses' %}" class="white-90">
                              <h3 class="mb0-00 f1-00">COURSES</h3>
-                            <ul class="mt5-00 dn"> 
-                                <li>Revit</li>
-                                <li>Naviswork</li>
-                                <li>Dynamo</li>
-                                <li>Python</li>
-                                <li>3d Studio Max</li>
-                            </ul>
                         </a>
                     </li>
                     <li class=" pb0-25
                                 mb2-00
                                 mb0-00-m
-                                bb bw1 b--white-90" tabindex="0" title="Discover" aria-label="Other Courses">
-                        <a href="{% url 'website:discover' %}" class="white-90">
+                                bb bw1 b--gold" tabindex="0" title="Discover" aria-label="Other Courses">
+                        <a href="{% url 'website:discover' %}" class="white-90 gold">
                             <h3 class="mb0-00 f1-00">DISCOVER</h3>
-                        <ul class="mt5-00 dn"> 
-                            <li>FAQ's</li>
-                            <li>Financing Options</li>
-                            <li>BIM/IPD</li>
-                            <li>BLOG</li>
-                        </ul>
                         </a>
                     </li>
                     <li class=" pa0-50
@@ -117,16 +111,96 @@
                             title="Start" 
                             aria-label="About Me"
                     >
-                        <a href="{% url 'accounts:register' %}" class=" dib
-                            pv0-50 ph1-00
-                            bg-gold white
-                            br0-25
-                           f1-00 ttu fw6  
-                            
-                            shadow-4"
-                        >
-                        <h3 class="mb0-00 f1-00">START</h3>
-                        </a>
+                         <!-- User Authentication -->
+                        {% if request.user.is_authenticated %}
+                            <!-- Loggen Out User -->
+                            <div id="header-user"
+                                class="flex"
+                            >
+                                <a  href="{% url 'accounts:logout' %}"
+                                    
+                                >
+                                    <figure class="flex items-center
+                                        pv0-25 ph0-50
+                                        white-90
+                                        " >
+                                        <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
+                                            alt="" 
+                                            class="w2-00 br0-25 mr1-00"
+                                        />
+                                        <figcaption>
+                                        <p class="mb0-00">{{request.user.username}}  </p>
+                                        <span class="f0-75">@ {{request.user.email}}</span>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <button id="dropdown-button">  
+                                    &DownArrow;  <!--replace with svg -->
+                                </button>
+                                <!-- User Dropdown Menu -->
+                                <div id="dropdown-menu" 
+                                    class=" dn 
+                                        w14-00 bg-black-60 mt4-50 z5 absolute pa1-00 ml0-50"
+                                >
+                                    <a href=""
+                                        class="flex items-center white-90 pa0-50"
+                                    >
+                                        <figure class="flex items-center justify-between"> 
+                                            <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
+                                                alt="" 
+                                                class="w1-00 h1-00 
+                                                    mr0-75" 
+                                            />
+                                            <figcaption>  Dashboard </figcaption>
+                                        </figure>
+                                    
+                                    </a>
+                                    <a href=""
+                                        class="flex items-center white-90 pa0-50"
+                                    >
+                                        <figure class="flex items-center justify-between"> 
+                                            <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
+                                                alt="" 
+                                                class="w1-00 h1-00 
+                                                    mr0-75" 
+                                            />
+                                            <figcaption>  Settings </figcaption>
+                                        </figure>
+                                    
+                                    </a>
+
+                                    <a href="{% url 'accounts:logout' %}"
+                                        class="flex items-center white-90 pa0-50"
+                                    >
+                                        <figure class="flex items-center justify-between"> 
+                                            <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
+                                                alt="" 
+                                                class="w1-00 h1-00 
+                                                    mr0-75" 
+                                            />
+                                            <figcaption>  Logout </figcaption>
+                                        </figure>
+                                    
+                                    </a>
+                                </div>
+                                <!-- User Dropdown Menu -->
+                            </div>
+                            <!-- Loggen Out User --> 
+                        {% else %}
+                            <!-- Login In User -->
+                            <a href="{% url 'accounts:register' %}" 
+                                class="flex
+                                    pv0-50 ph1-00
+                                    bg-gold white
+                                    br0-25
+                                    f1-00 ttu fw6
+                                    shadow-4"
+                                >
+                                    <h3 class="mb0-00 f1-00">START</h3>
+                                </a> 
+                                <!-- Logged In User -->
+                        {% endif %}
+                        <!-- User Authenthication -->
                     </li>
                    
                     <li class="dn pb0-25
@@ -134,10 +208,13 @@
                                 mb0-00-m" 
                         tabindex="0"
                         title="" 
-                        aria-label="">
-                        <ul id="connect" class="footerNav__Item flex dn-m w-100">
-                            <div class="flex justify-around items-center w-100
+                        aria-label=""
+                    >
+                        <div class="footerNav__Item flex dn-m w-100"
+                        >
+                            <ul id="connect" class="flex justify-around items-center w-100
                             mb0-00-m">
+                          
                                 <li class="mr0-75"> 
                                     <a href="https://twitter.com/KwameDomfe" title="Follow me on Twitter" target="_blank" rel="noopener noreferrer">
                                         <img src="{% static 'svgs/twitter.svg' %}" alt="" class="w1-25 blue0">
@@ -164,94 +241,12 @@
                                         <img src="{% static 'svgs/WhatsApp.svg' %}" alt="" class="w1-25">
                                     </a>
                                 </li>
-                            </div>
-                        </ul>
+                            </ul>
+                        </div>
                     </li> 
                 </ul>    
             </nav>
         </section>
-        
     </header>
     <!-- 00.00   HEADER SECTION -->
-    <div class="
-        flex justify-between items-center
-        mb1-00 
-        container80"
-    >
-        <!-- User Aythentication -->
-        {% if request.user.is_authenticated %}
-        
-            <!-- Loggen Out User -->
-            {% comment %} <div id="header-user"
-                class="flex h2-00"
-            >
-                <a  href=""
-                    class='flex
-                        pv0-25 ph0-50
-                        black-90
-                        ' 
-                >
-                    <figure>
-                        <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
-                            alt="" 
-                            class="w2-00 br-100 mr1-00"
-                        />
-                    </figure>
-                    <p>{{request.user.username}} <br> <span>@ {{request.user.username}}</span></p>
-                </a>
-                <button id="dropdown-button">  
-                    &DownArrow;  <!--replace with svg -->
-                </button>
-            </div>  {% endcomment %}
-            <!-- Loggen Out User --> 
-            
-        {% else %}
-            
-            <!-- Logged In User -->
-            {% comment %} <a  class="flex items-center justify-center 
-                    ph0-50
-                   
-                    white-90 
-                    " 
-                href="">
-                <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
-                    alt="" 
-                    class="w1-50 h-100 mr0-50 br0-75" 
-                />
-                <p class="mb0-00">LOGIN</p>
-            </a> {% endcomment %}
-            <!-- Logged In User -->
-        
-        {% endif %}
-        <!-- User Authenthication -->
-    </div>
-    
-    <!-- User Dropdown Menu -->
-    <div id="dropdown-menu" 
-        class="flex flex-column flex-end justify-center
-            
-            container80">
-        <a href=""
-            class="flex items-center">
-            <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
-                alt="" 
-                class="
-                    w0-75 h0-75 
-                    mr0-75" 
-            />
-            Settings
-        </a>
-
-        <a href=""
-            class="flex items-center">
-            <img src="{% static 'images/Logo_Images/LOGO.png' %}" 
-                alt="" 
-                class="w0-75 h0-75 
-                    mr0-75" 
-            />
-            Logout
-        </a>
-    </div>
-    <!-- User Dropdown Menu -->
-    
 </nav>

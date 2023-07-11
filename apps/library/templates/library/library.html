@@ -1,0 +1,582 @@
+{% extends 'base_layout3.html' %}
+
+{% load static %}
+
+{% block title %} Style Guide {% endblock title %}
+
+{% block content %}
+
+    <nav id="libraryNav"
+        class="fixed bg-black-50 z-5 w-100"
+    >
+            <ul class="flex justify-between items-center 
+                container90 
+                h2-00 
+                pa0-50 
+                b white-90 dib b mb0-50g-black-60"
+            >
+                <li>
+                    <a href="{% url 'library:styleGuide' %}"
+                        class="white-90 "> Style Guide</a>
+                </li>
+                <li>
+                    <a href="{% url 'library:tags' %}"
+                        class="white-90">HTML Tags</a>
+                </li>
+                <li>
+                    <a href="{% url 'library:atoms' %}"
+                        class="white-90">Atoms</a>
+                </li>
+                <li>
+                    <a href="{% url 'library:molecules' %}"
+                    class="white-90">Molecules</a>
+                </li>
+                <li>
+                    <a href="{% url 'library:organisms' %}"
+                    class="white-90">Organisms</a>
+                </li>
+                <li>
+                    <a href="{% url 'library:templates' %}"
+                    class="white-90">Templates</a>
+                </li>
+                <li>
+                    <a href="{% url 'library:pages' %}"
+                    class="white-90">Pages</a>
+                </li>
+            </ul>
+    </nav>
+   
+    <div class="grid gtc12 container90 mt3-00"
+    > 
+        
+        <div id="libraryMain"
+            class="gc1s9 grid container w-100"
+        >
+            <header id="o__bannerBlock" 
+                class="flex justify-center items-center"
+            >
+                <div class="w-100 h-100"
+                >
+                    <figure class= "mt3-00"
+                    >
+                        <img src="/static/images/Portrait_Images/students_coding.jpg" alt="" 
+                            class="cover vh-50"
+                        /> 
+                        <hgroup class="gc1s12 tl mv2-00 w-60"
+                        >
+                            <h2>
+                                {% block pageTitle %}Library{% endblock pageTitle %}
+                            </h2>
+                            <p id=""
+                            >
+                                {% block pageDescription %}
+                                    {% lorem 60 w random %}.
+                                {% endblock pageDescription %}
+                        </p>
+                        </hgroup>  
+                    </figure>  
+                </div>
+            </header>
+            <article id=""
+                class=""
+            >
+                <div class="grid gtc12 pt-00 ggap2-00">
+                    <div class="gc1s12">
+                        <section class="">
+                            {% block pageContent %} 
+                                Replace this content
+                            {% endblock pageContent %}
+                        </section>
+                    </div>
+                    <div class="gc1s12">
+                        <section>
+                            replace this content
+                        </section>
+                    </div>
+                </div>
+            </article>
+            
+            <footer id=""
+                class="bg-black-90 pa1-00 white-90 mb2-00"
+            >
+                <div >
+                    library footer
+                </div>
+            </footer>
+           
+        </div>
+        {% block libraryAsideRight %}
+        <aside id=""
+            class="gc10s3 "
+        >
+            <div id=""
+                class="vh-90 mb2-00 pt3-00 sticky top-6 of-y-scroll" 
+            >
+                <header id="asideHeader"
+                    class="tc tl-m w-100 mb1-00 mh1-00"
+
+                >
+                <a href="{% url 'library:styleGuide' %}"
+                class="black-90 "> BACK </a>
+                    <p class="f1-00 f1-25-s f1-25-l mv0-00 bb pb0-50 grey">
+                        On this page
+                    </p>
+                </header>
+                <div class="flex flex-column justify-between items-center  
+                    w-100 
+                    ph1-00 pt2-00 
+                    bg-black-60 white-90 tj"
+                >	
+                    {% block section_01 %}
+                    <section class="h-100 w-100">
+                        <h4 class="mb1-00 pb0-25 b ttu bb gold">
+                            {% block Category_01 %}Category Name{% endblock Category_01 %}
+                        </h4>
+                        <ul id="asideMain"
+                            class="w-100 tl"
+                        >
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib b mb0-50">{% block C1T1 %}Family Name{% endblock C1T1 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 tl">
+                                    <li>
+                                        <a href=""
+                                            class="gold mb1-00">{% block C1T11 %}Type Name{% endblock C1T11 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="gold mb1-00">{% block C1T12 %}T12{% endblock C1T12 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold mb1-00">{% block C1T13 %}T13{% endblock C1T13 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold mb1-00">{% block C1T14 %}T14{% endblock C1T14 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold mb1-00">{% block C1T15 %}T15{% endblock C1T15 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold mb1-00">{% block C1T16 %}T16{% endblock C1T16 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold mb1-00">{% block C1T17 %}T17{% endblock C1T17 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib b mb0-50">{% block C1T2 %}T2{% endblock C1T2 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl">
+                                    <li>
+                                        <a href=""
+                                            class="gold">{% block C1T21 %}T2{% endblock C1T21 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="gold">{% block C1T22 %}T2{% endblock C1T22 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold">{% block C1T23 %}T3{% endblock C1T23 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold">{% block C1T24 %}T3{% endblock C1T24 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold">{% block C1T25 %}T3{% endblock C1T25 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="gold">{% block C1T26 %}T3{% endblock C1T26 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib b mb0-50">
+                                    {% block C1T3 %}T3{% endblock C1T3 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl">
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C1T31 %}T3{% endblock C1T31 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C1T32 %}T2{% endblock C1T32 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C1T33 %}T3{% endblock C1T33 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C1T4 %}T4{% endblock C1T4 %}</a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl"
+                                >
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C1T41 %}T4{% endblock C1T41 %}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C1T42 %}T2{% endblock C1T42 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C1T43 %}T3{% endblock C1T43 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C1T5 %}C1T5{% endblock C1T5 %}</a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl"
+                                >
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C1T51 %}T5{% endblock C1T51 %}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C1T52 %}T2{% endblock C1T52 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C1T53 %}T3{% endblock C1T53 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C1T6 %}C1T6{% endblock C1T6 %}</a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl"
+                                >
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C1T61 %}T6{% endblock C1T61 %}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C1T62 %}T2{% endblock C1T62 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C1T63 %}T3{% endblock C1T63 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    {% endblock section_01 %}
+
+                    {% block section_02 %}
+                    <section class="h-100 w-100">
+                        <h4 class="b ttu bb gold">
+                            {% block Category_02 %}Category Name{% endblock Category_02 %}
+                        </h4>
+                        <ul id="asideMain"
+                            class="w-100 white-90 tl">
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib b mb0-50">{% block C2T1 %}T1{% endblock C2T1 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl">
+                                    <li>
+                                        <a href=""
+                                            class="white-90 mb1-00">{% block C2T11 %}T11{% endblock C2T11 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90 mb1-00">{% block C2T12 %}T12{% endblock C2T12 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T13 %}T13{% endblock C2T13 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T14 %}T14{% endblock C2T14 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T15 %}T15{% endblock C2T15 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T16 %}T16{% endblock C2T16 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T17 %}T17{% endblock C2T17 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T18 %}T18{% endblock C2T18 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T19 %}T19{% endblock C2T19 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T110 %}T110{% endblock C2T110 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C2T111 %}T111{% endblock C2T111 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib b mb0-50">{% block C2T2 %}T2{% endblock C2T2 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl">
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C2T21 %}T2{% endblock C2T21 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C2T22 %}T2{% endblock C2T22 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C2T23 %}T3{% endblock C2T23 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib b mb0-50">
+                                    {% block C2T3 %}T3{% endblock C2T3 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl">
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C2T31 %}T3{% endblock C2T31 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C2T32 %}T2{% endblock C2T32 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C2T33 %}T3{% endblock C2T33 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C2T4 %}T4{% endblock C2T4 %}</a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl"
+                                >
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C2T41 %}T4{% endblock C2T41 %}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C2T42 %}T2{% endblock C2T42 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C2T43 %}T3{% endblock C2T43 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C2T5 %}T5{% endblock C2T5 %}</a>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C2T6 %}T6{% endblock C2T6 %}</a>
+                            </li>
+                        </ul>
+                    </section>
+                    {% endblock section_02 %}
+
+                    {% block section_03 %}
+                    <section class="h-100 w-100">
+                        <h4 class="b ttu bb gold">
+                            {% block Category_03 %}Category Name{% endblock Category_03 %}
+                        </h4>
+                        <ul id="asideMain"
+                            class="w-100 white-90 tl">
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib  b mb0-50">{% block C3T1 %}T1{% endblock C3T1 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl">
+                                    <li>
+                                        <a href=""
+                                            class="white-90 mb1-00">{% block C3T11 %}T11{% endblock C3T11 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90 mb1-00">{% block C3T12 %}T12{% endblock C3T12 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C3T13 %}T13{% endblock C3T13 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C3T14 %}T14{% endblock C3T14 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C3T15 %}T15{% endblock C3T15 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C3T16 %}T16{% endblock C3T16 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90 mb1-00">{% block C3T17 %}T17{% endblock C3T17 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib b mb0-50">{% block C3T2 %}T2{% endblock C3T2 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl">
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C3T21 %}T2{% endblock C3T21 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C3T22 %}T2{% endblock C3T22 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C3T23 %}T3{% endblock C3T23 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                    class="white-90 dib b mb0-50">
+                                    {% block C3T3 %}T3{% endblock C3T3 %}
+                                </a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl">
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C3T31 %}T3{% endblock C3T31 %}
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C3T32 %}T2{% endblock C3T32 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C3T33 %}T3{% endblock C3T33 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C3T4 %}T4{% endblock C3T4 %}</a>
+                                <ul id=""
+                                    class="ml1-00 w-100 white-90 tl"
+                                >
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C3T41 %}T4{% endblock C3T41 %}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="white-90">{% block C3T42 %}T2{% endblock C3T42 %}</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                        class="white-90">{% block C3T43 %}T3{% endblock C3T43 %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C3T5 %}T5{% endblock C3T5 %}</a>
+                            </li>
+                            <li class="mb1-00">
+                                <a href=""
+                                class="white-90 dib b mb0-50">{% block C3T6 %}T6{% endblock C3T6 %}</a>
+                            </li>
+                        </ul>
+                    </section>
+                    {% endblock section_03 %}
+                </div>
+                <footer id="asideFooter"
+                    class="pa1-00 bg-red"
+                >
+                    Aside Footer
+                </footer>
+            </div> 
+        </aside>
+        {% endblock libraryAsideRight %}
+
+
+        <div class="gc1s12">
+            {% include 'partials/_mainFooter.html' %}
+        </div>
+    </div>
+   
+{% endblock %}

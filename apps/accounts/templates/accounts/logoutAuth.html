@@ -2,8 +2,8 @@
 class="flex flex-column items-center justify-between
     w-100 h-100"
 >
-    <hgroup class="w-100 tc pv2-00 mb1-00 gold">
-        <h1 class="ttc ma0-00 mb1-00">Logout</h1>
+    <hgroup class="w-100 tc pv2-00 mb1-00 bg-black-90 gold">
+        <h1 class="ttc ma0-00">Logout</h1>
         {% comment %} <h1 class="ttc ma0-00 mb1-00">Thank you for passing through...</h1>
         <p class="ttc mb0-00">Do not hesitate to contact me just in case you need help !</p> {% endcomment %}
     </hgroup>
@@ -11,7 +11,7 @@ class="flex flex-column items-center justify-between
         <form 
             action="." 
             method="POST"
-            class=" pa2-00 mb10-00"
+            class=" pa2-00 mb8-00"
         >{% csrf_token %}
 
             <p class="mb4-00">Are you sure you want to log Out?</p>
@@ -19,20 +19,20 @@ class="flex flex-column items-center justify-between
             <div class="mb3-00">
                 <button id=""
                     type="submit"
-                    class="pa0-50">
-                    Yes, Log Out.
+                    class="pa0-50 bg-gold b--none white-90 b">
+                    Log Out.
                 </button>
             </div>
             
         </form>
-        <footer class="w-100 pv2-00 flex items-center justify-center white-90"> 
+        <footer class="w-100 pv2-00 bg-black-90 flex items-center justify-center white-90"> 
             <div >
                 See you again. Thank you for visiting.
             </div>
         </footer>   
     {% else %}
-        <footer class="w-100 pv2-00 flex items-center justify-center">     
-            <p>You are not logged in. Would you like to <a href="{% url 'accounts:login' %}" class="gold b">Log In</a> ?</p>
+        <footer class="w-100 pv2-00 bg-black-90 flex items-center justify-center">     
+            <div>You are not logged in. Would you like to <a href="{% url 'accounts:login' %}" class="white-90 b ba b--gold br0-25 bg-black-60 pv0-25 ph0-50 ttu">Log In</a> ?</div>
    
         </footer>  
     {% endif %}  
